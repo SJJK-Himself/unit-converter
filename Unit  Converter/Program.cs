@@ -54,6 +54,8 @@ namespace Unit_Converter
                 amount = Convert.ToDouble(Console.ReadLine());
                 Console.WriteLine(amount + " miles equals to " + amount * 1.609344 + " kilometers");
             }
+            Console.WriteLine("\nPress any button to close the program");
+            Console.ReadKey();
         }
     }  
 }
