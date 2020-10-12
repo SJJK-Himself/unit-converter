@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 /**
  * @author Sampo Kupiainen
- * @version 9.10.2020
+ * @version 2.0
+ * @created 08.10.2020 (DD/MM/YYY)
+ * @updated 13.10.2020 (DD/MM/YYY)
  */
 namespace Unit_Converter
 {
@@ -14,51 +16,44 @@ namespace Unit_Converter
     {
         static void Main(string[] args)
         {
-            //Prints the name of the app and its maker
             Console.WriteLine("\nSimple unit converter");
             Console.WriteLine("=============================\n");
             Console.WriteLine("Made by Sampo Kupiainen, 2020\n");
             Console.WriteLine("=============================\n");
 
-            //Calls the actual converter
             Converter();
         }
 
 
-        //Asks for input from the user and then converts with the given parameters
+        /// <summary>
+        /// Has the user choose which conversion to do, does the conversion and prints the result
+        /// </summary>
+        /// <param name="pick">Represents the conversion the user chooses</param>
+        /// <param name="amount">Represents the amount of chosen units to convert</param>
         static void Converter()
         {
-            //Declaring variables
-            String unit1;
+            int pick;
             Double amount;
-            String unit2;
 
-            //Ask the user to enter the amount and name of the unit to be converted
-            Console.WriteLine("Enter a number and unit separated with a space:");
-            var paramList = Console.ReadLine().Split(' '); // https://stackoverflow.com/questions/36266643/ask-user-to-enter-parameters-in-console-application
-            amount = Convert.ToDouble(paramList[0]);
-            unit1 = paramList[1];
+            Console.WriteLine("Type a number and press enter to choose a conversion");
+            Console.WriteLine("1: Kilometers to miles:");
+            Console.WriteLine("2: Miles to kilometers");
 
+            pick = Convert.ToInt16(Console.ReadLine());
 
-            //Ask the user for the unit to convert to
-            Console.WriteLine("Enter the unit to convert to:");
-            unit2 = Console.ReadLine();
-
-            //if-else-statement checking the inputs
-            if (unit1 == "km" && unit2 == "mi")
+            if(pick == 1)
             {
+                Console.WriteLine("Enter the amount of kilometers:");
+                amount = Convert.ToDouble(Console.ReadLine());
                 Console.WriteLine(amount + " kilometers equals to " + amount * 0.621371192 + " miles");
             }
 
-            else if (unit1 == "mi" && unit2 == "km")
+            if(pick == 2)
             {
+                Console.WriteLine("Enter the amount of miles:");
+                amount = Convert.ToDouble(Console.ReadLine());
                 Console.WriteLine(amount + " miles equals to " + amount * 1.609344 + " kilometers");
             }
-
-            else
-            {
-                Console.WriteLine("ERROR");
-            }
         }
-    }
+    }  
 }
