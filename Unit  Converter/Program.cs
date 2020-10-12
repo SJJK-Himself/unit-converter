@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 /**
  * @author Sampo Kupiainen
- * @version 8.10.2020
+ * @version 9.10.2020
  */
 namespace Unit_Converter
 {
@@ -15,7 +15,7 @@ namespace Unit_Converter
         static void Main(string[] args)
         {
             //Prints the name of the app and its maker
-            Console.WriteLine("Simple unit converter \n");
+            Console.WriteLine("\nSimple unit converter");
             Console.WriteLine("=============================\n");
             Console.WriteLine("Made by Sampo Kupiainen, 2020\n");
             Console.WriteLine("=============================\n");
@@ -44,14 +44,20 @@ namespace Unit_Converter
             Console.WriteLine("Enter the unit to convert to:");
             unit2 = Console.ReadLine();
 
-            //if-statement checking the inputs
+            //if-else-statement checking the inputs
             if (unit1 == "km" && unit2 == "mi")
             {
                 Console.WriteLine(amount + " kilometers equals to " + amount * 0.621371192 + " miles");
             }
+
+            else if (unit1 == "mi" && unit2 == "km")
+            {
+                Console.WriteLine(amount + " miles equals to " + amount * 1.609344 + " kilometers");
+            }
+
             else
             {
-                Console.WriteLine("WIP");
+                Console.WriteLine("ERROR");
             }
         }
     }
