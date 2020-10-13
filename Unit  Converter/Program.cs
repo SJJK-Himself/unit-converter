@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 /**
  * @author Sampo Kupiainen
- * @version 2.0
+ * @version 2.1
  * @created 08.10.2020 (DD/MM/YYY)
  * @updated 13.10.2020 (DD/MM/YYY)
  */
@@ -28,8 +28,8 @@ namespace Unit_Converter
         /// <summary>
         /// Has the user choose which conversion to do, does the conversion and prints the result
         /// </summary>
-        /// <param name="pick">Represents the conversion the user chooses</param>
-        /// <param name="amount">Represents the amount of chosen units to convert</param>
+        /// <param name="pick">The number representing the conversion the user chooses</param>
+        /// <param name="amount">The amount of chosen units to convert</param>
         static void Converter()
         {
             int pick;
@@ -41,19 +41,25 @@ namespace Unit_Converter
 
             pick = Convert.ToInt16(Console.ReadLine());
 
-            if(pick == 1)
+            if (pick == 1)
             {
                 Console.WriteLine("Enter the amount of kilometers:");
                 amount = Convert.ToDouble(Console.ReadLine());
                 Console.WriteLine(amount + " kilometers equals to " + amount * 0.621371192 + " miles");
             }
 
-            if(pick == 2)
+            if (pick == 2)
             {
                 Console.WriteLine("Enter the amount of miles:");
                 amount = Convert.ToDouble(Console.ReadLine());
                 Console.WriteLine(amount + " miles equals to " + amount * 1.609344 + " kilometers");
             }
+
+            if (pick > 2)
+            {
+                Console.WriteLine("\n!!The program does not support this input!!");
+            }
+
             Console.WriteLine("\nPress any button to close the program");
             Console.ReadKey();
         }
