@@ -4,11 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-/**
- * @version 2.2
- * @created 08.10.2020 (DD/MM/YYY)
- * @updated 7.12.2020 (DD/MM/YYY)
- */
 namespace Unit_Converter
 {
     public class UnitConverter
