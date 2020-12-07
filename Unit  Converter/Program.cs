@@ -5,10 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 /**
- * @author Sampo Kupiainen
- * @version 2.1
+ * @version 2.2
  * @created 08.10.2020 (DD/MM/YYY)
- * @updated 13.10.2020 (DD/MM/YYY)
+ * @updated 7.12.2020 (DD/MM/YYY)
  */
 namespace Unit_Converter
 {
@@ -17,8 +16,6 @@ namespace Unit_Converter
         static void Main(string[] args)
         {
             Console.WriteLine("\nSimple unit converter");
-            Console.WriteLine("=============================\n");
-            Console.WriteLine("Made by Sampo Kupiainen, 2020\n");
             Console.WriteLine("=============================\n");
 
             Converter();
