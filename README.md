@@ -1,7 +1,7 @@
 # Unit Converter
-A simple console application for converting units of measurement
+A simple console application for converting units of measurement.
 
-## Currently supports:
+## Supports:
 Kilometers-to-miles -conversion
 
 Miles-to-kilometers -conversion
